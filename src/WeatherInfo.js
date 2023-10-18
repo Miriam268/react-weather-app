@@ -11,24 +11,20 @@ export default function WeatherInfo(props) {
         <li>
             <FormattedDate date={props.data.date} />
             </li>
-        <li className="text-capitalize">
-            {props.data.description}</li>
+        <li className="text-capitalize">{props.data.description}</li>
         </ul> 
-        <div classname="row mt-3">
+        <div className="row mt-3">
             <div className="col-6">
                 <div className="clearfix">
                     <div className="float-left">
                     <WeatherIcon code={props.data.icon}  />
                     </div>
-                
+                    </div>
                  <div className="float-left">
-                    <WeatherTemperature celcius={props.data.temperature}/>
-                 <span className="temperature">
-                 {Math.round(props.data.temperature)}
-                 </span>
-                 <span className="unit">°C</span>
-            </div>
-            </div>
+                    <WeatherTemperature celsius={props.data.temperature}/>
+                    </div>
+                    </div>
+                    </div>
             <div className="col-6">
                 <ul>
                     <li>Humidity: {props.data.humidity}%</li>
@@ -36,7 +32,9 @@ export default function WeatherInfo(props) {
                 </ul>
             </div>
         </div>
-        </div>
-        </div>
-    );
-    }
+        
+        );
+
+        }
+        
+    
